@@ -2,7 +2,6 @@ from keras.layers import Input, Reshape, Dropout, Dense, Flatten, BatchNormaliza
 from keras.layers.advanced_activations import LeakyReLU
 from keras.layers.convolutional import UpSampling2D, Conv2D
 from keras.models import Model, load_model
-# import sequential differently
 from keras.models import Sequential
 from keras.optimizers import Adam
 import numpy as np
@@ -127,13 +126,6 @@ def save_images(cnt, noise):
     filename = os.path.join(output_path, f"trained-{cnt}.png")
     im = Image.fromarray(image_array)
     im.save(filename)
-
-# adding this to solve
-from tensorflow.python.framework import ops
-ops.reset_default_graph()
-
-
-# the code after this, poorly organized and not clear
 
 # image_shape = (IMAGE_SIZE, IMAGE_SIZE, IMAGE_CHANNELS)
 image_shape = (IMAGE_SIZE, IMAGE_SIZE, 3)
