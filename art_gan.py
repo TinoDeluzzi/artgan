@@ -20,14 +20,15 @@ SAVE_FREQ = 100
 NOISE_SIZE = 100 #  is a latent dimension size to generate our images.
 
 # Configuration
-EPOCHS = 10000 # number of iterations
+#EPOCHS = 10000 # number of iterations
+EPOCHS = 10
 BATCH_SIZE = 32
 GENERATE_RES = 3
 IMAGE_SIZE = 128 # rows/cols
 IMAGE_CHANNELS = 3
 
 # loading our training data, as saved from image_resizer.py
-training_data = np.load('cubism_data.npy')
+training_data = np.load('cubism_data.npy', allow_pickle=True)
 
 # Discriminator
 def build_discriminator(image_shape):
