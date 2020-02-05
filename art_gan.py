@@ -28,7 +28,7 @@ IMAGE_SIZE = 128 # rows/cols
 IMAGE_CHANNELS = 3
 
 # loading our training data, as saved from image_resizer.py
-training_data = np.load('cubism_data.npy', allow_pickle=True)
+training_data = np.load('cubism_data.npy')
 
 # Discriminator
 def build_discriminator(image_shape):
