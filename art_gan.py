@@ -20,8 +20,7 @@ SAVE_FREQ = 100
 NOISE_SIZE = 100 #  is a latent dimension size to generate our images.
 
 # Configuration
-#EPOCHS = 10000 # number of iterations
-EPOCHS = 10
+EPOCHS = 10000 # number of iterations
 BATCH_SIZE = 32
 GENERATE_RES = 3
 IMAGE_SIZE = 128 # rows/cols
